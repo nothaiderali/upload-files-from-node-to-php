@@ -46,7 +46,7 @@ if (!in_array($fileExtention, $allowedExtentions)) {
 $fileName = str_replace(" ", "_", $fileName);
 
 $timestamp = floor(microtime(true) * 1000);
-$path = "{$timestamp}_$fileName";
+$path = "files/{$timestamp}_$fileName";
 
 $result = move_uploaded_file($_FILES["file"]["tmp_name"], $path);
 
